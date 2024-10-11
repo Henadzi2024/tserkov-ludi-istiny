@@ -7,7 +7,8 @@
     <style>
         body { font-family: Arial, sans-serif; background-color: #f2f2f2; color: #333; }
         header, footer { background-color: #ffcc33; color: #fff; text-align: center; padding: 1em 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; display: inline-block; margin-top: 5px; }
+        .nav-row { margin: 0; display: flex; justify-content: center; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; text-align: center; }
         .intro { margin-bottom: 20px; }
     </style>
@@ -16,12 +17,17 @@
     <header>
         <h1>Церковь "Люди Истины"</h1>
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="news.html">Новости</a>
-            <a href="mentors.html">Духовные отцы и наставники</a>
-            <a href="services.html">Служения</a>
-            <a href="photos.html">Фото</a>
-            <a href="misc.html">Разное</a>
+            <div class="nav-row">
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="mentors.html">Духовные отцы и наставники</a>
+                <a href="services.html">Служения</a>
+            </div>
+            <div class="nav-row">
+                <a href="photos.html">Фото</a>
+                <a href="misc.html">Разное</a>
+                <a href="prophetic_school_2024.html">Пророческая Школа 2024</a>
+            </div>
         </nav>
     </header>
 
