@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Разное - Церковь "Люди Истины"</title>
     <style>
-       <a href="index.html" class="back-link">Вернуться на главную</a> 
+  
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
@@ -49,6 +49,38 @@
         <p>Посещаем исторические места, кино и концерты. Любим читать и распространять хорошую литературу. 
         Любим барбекю, бильярд и поездки на океан. Все это укрепляет взаимоотношения и обогащает каждого лично.</p> 
     </div>
+<style>
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffcc33;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+        display: none;
+    }
+</style>
+
+<div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+<script>
+    window.onscroll = function() {
+        var button = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
 
     <footer>
         <p>&copy; 2024 Церковь "Люди Истины". Все права защищены.</p>
