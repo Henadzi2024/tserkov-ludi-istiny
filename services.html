@@ -79,6 +79,8 @@
 <body>
     <header>
         <h1>Наши служения</h1>
+        <a href="index.html" class="back-link">Вернуться на главную</a>
+
     </header>
 
     <div class="container">
@@ -110,6 +112,38 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>
+<style>
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffcc33;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+        display: none;
+    }
+</style>
+
+<div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+<script>
+    window.onscroll = function() {
+        var button = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
 
     <footer>
         <p>&copy; 2024 Церковь "Люди Истины". Все права защищены.</p>
