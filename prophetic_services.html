@@ -1,35 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пророческие служения - Аудио</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #ffcc33;
+            padding: 1em 0;
+            text-align: center;
+        }
+        footer {
+            font-size: 0.8em;
+            color: #fff;
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .content h2 {
+            color: #ff9900;
+            font-size: 1.5em;
+        }
+        .content h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc33;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Пророческие служения</h1>
-        <nav>
-            <a href="index.html">На главную</a> &nbsp;&nbsp;&nbsp;
-            <a href="javascript:history.back()">Назад</a> <!-- Кнопка "Назад" -->
-        </nav>
     </header>
 
-    <div class="content">
-        <h2>Аудиоматериалы пророческих служений</h2>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html">На главную</a> &nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.back()">Назад</a>
+        </div>
 
-        <h3>Айбек Жума. День выпрямления 18 09 24</h3>
-        <audio controls>
-            <source src="https://drive.google.com/uc?export=download&id=1Tf9qfwdws4K2oojxItyFgfxxFFD8YeCb" type="audio/mpeg">
-            Ваш браузер не поддерживает воспроизведение аудио.
-        </audio>
+        <div class="content">
+            <h2>Аудиоматериалы пророческих служений</h2>
 
-        <h3>Айбек Жума. Выпрямление ваше настало 18 08 24</h3>
-        <audio controls>
-            <source src="https://drive.google.com/uc?export=download&id=1Qony_cuQjSbcutbpi5YCj_YQqkx6hbTi" type="audio/mpeg">
-            Ваш браузер не поддерживает воспроизведение аудио.
-        </audio>
+            <h3>Айбек Жума. День выпрямления 18 09 24</h3>
+            <audio controls>
+                <source src="https://drive.google.com/uc?export=download&id=1Tf9qfwdws4K2oojxItyFgfxxFFD8YeCb" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+
+            <h3>Айбек Жума. Выпрямление ваше настало 18 08 24</h3>
+            <audio controls>
+                <source src="https://drive.google.com/uc?export=download&id=1Qony_cuQjSbcutbpi5YCj_YQqkx6hbTi" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+        </div>
     </div>
+
+    <div class="back-to-top" onclick="scrollToTop()">↑ Наверх</div>
+
+    <script>
+        window.onscroll = function() {
+            var button = document.querySelector(".back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 
     <footer>
         <p>&copy; 2024 Церковь "Люди Истины". Все права защищены.</p>
